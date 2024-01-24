@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="mediaa"></p>
+<!-- Almacenar en un array las notas de 5 alumnos, y visualizar aquellas notas por encima de la media -->
+<!--Declarar un array con varias notas y visualizar
+
+1 Varias notas y visualizar la media del array, todas las notas
+2 Visualizar si está aprobado o no
+3 Obtener otro array que contenga solo las notas aprobadas, y visualizar ese array
+
+- Subirlo al github -->
+<script>
+ const tabla_notas = [3,5,4,6,10];
+  function Media(tab)
+  {
+    let suma = 0;
+    for (let i = 0; i < tab.length; i++) {
+           suma = suma + tab [i]; 
+         }
+          media = suma/tab.length;
+          return media;
+  }
+//--Programa principal--//
+result = Media (tabla_notas);
+document.getElementById("mediaa").innerHTML = "La media de tus notas es " +result;
+</script>
+</body>
+</html>
