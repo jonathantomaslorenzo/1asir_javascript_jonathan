@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Access a JavaScript object2</h2>
+<p> Notas aprobadas: </p>
+<p id="demo"></p>
+
+<script>
+/* Como hacerlo:Una clave nombre y el valor dentro de un array que sean los sueldos.
+
+Almacenamos en un array las notas y los nombres de varios alumnos, se pide nombre de los alumnos sin ningun suspenso */
+
+/*function Visualizar(obj){
+document.getElementById("demo").innerHTML = obj.empleados[1]['firstName'];
+}*/
+
+function Visualizar(nota){
+document.getElementById("demo").innerHTML = "Notas aprobadas:  " +obj.notas[0]['conta'];
+}
+
+const myObj = {notas:[
+  { nombre:"Juan", nota1:"4" },
+  { nombre:"Antonio",nota2:"7" },
+  { nombre:"Lulu",nota3:"10" },
+  { nombre:"Luis",nota4:"9" },
+  { nombre:"Javi",nota5:"5" },
+  { nombre:"Andres",nota6:"8" },
+  { nombre:"Arthur",nota7:"4" },
+  { nombre:"Miguel",nota8:"6" }
+]};
+
+
+  function aprobados (nota){
+          let conta = 0;
+          for (let i = 0; i < nota.length; i++) {
+            if (nota [i] >= 5 ) {
+              conta += 1;
+            }
+           
+              }
+                 return conta;
+            }
+
+Visualizar(nota);
+
+</script>
+
+</body>
+</html>
