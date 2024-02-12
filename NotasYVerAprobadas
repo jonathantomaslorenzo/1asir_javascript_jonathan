@@ -16,20 +16,15 @@ document.getElementById("demo").innerHTML = obj.empleados[1]['firstName'];
 }*/
 
 function Visualizar(nota){
-document.getElementById("demo").innerHTML = "Notas aprobadas:  " +obj.notas[0]['conta'];
+document.getElementById("demo").innerHTML = "Notas aprobadas:  " + obj.alumnos + conta;
 }
 
-const myObj = {notas:[
-  { nombre:"Juan", nota1:"4" },
-  { nombre:"Antonio",nota2:"7" },
-  { nombre:"Lulu",nota3:"10" },
-  { nombre:"Luis",nota4:"9" },
-  { nombre:"Javi",nota5:"5" },
-  { nombre:"Andres",nota6:"8" },
-  { nombre:"Arthur",nota7:"4" },
-  { nombre:"Miguel",nota8:"6" }
-]};
-
+let alumnos = [
+  [ "Juan", 7, 2, 4, 10],
+  [ "Lola", 8, 6, 7, 6],
+  [ "Julia", 7, 2, 4, 5],
+  [ "Adrian", 3, 2, 4, 5],
+];
 
   function aprobados (nota){
           let conta = 0;
