@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Access a JavaScript object</h2>
+<ul id="miLista">
+
+</ul>
+
+<script>
+
+let text ='{"alumnos":[ '+
+'{"nombre":"Juan", "notas":[5,7,7,8,9]},' +
+'{"nombre":"Pedro", "notas":[5,6,7,5,10]},' +
+'{"nombre":"Luisa", "notas":[5,7,6,7,9]} ]}';
+
+
+const obj = JSON.parse(text);
+
+for (let i=0; i < obj.alumnos.length; i++){
+
+  const node = document.createElement("li");
+
+  const textnode = document.createTextNode(obj.alumnos[i].nombre);
+
+  node.appendChild(textnode);
+
+  document.getElementById("miLista").appendChild(node);
+}
+
+
+</script>
+
+</body>
+</html>
