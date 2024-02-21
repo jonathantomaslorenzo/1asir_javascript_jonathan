@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+<script>
+/* Declarar un array con notas y dos botones. En uno se especifica aprobados y en otro los suspensos.
+Si se pusa el boton de suspenso de visualiza solo las notas menores a 5, si se pulsa aprobados de sivualiza las notas iguales o mayores a 5 */
+
+//------PROGRAMA PRINCIPAL----------
+
+  let alumnos = [7, 2, 4, 10, 6];
+
+   function Aprobados (tab){
+          
+          for (let i = 0; i < tab.length; i++) {
+            if (tab [i] >= 5 ) {
+              alert(tab[i]);
+            }      
+              }
+                
+            }
+
+   function Suspensos (tab){
+          
+          for (let i = 0; i < tab.length; i++) {
+            if (tab [i] < 5 ) {
+              alert(tab[i]);
+            }      
+              }
+                
+            }
+$(document).ready(function(){
+
+     $("#n1").click(function(){ 
+        Aprobados(alumnos);
+        });
+
+     $("#n2").click(function(){ 
+      Suspensos(alumnos);
+     });
+     
+});
+
+</script>
+
+</head>
+
+
+<body>
+
+<button id="n1">Número de aprobados:</button>
+<button id="n2">Número de <strong>sus</strong>pensos:</button>
+
+
+</body>
+</html>
