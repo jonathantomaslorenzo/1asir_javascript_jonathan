@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-color:lightcyan;
+			font-family: Arial;			
+		}
+	</style>
+</head>
+<body>
+
+<p>
+Declarar un array con valores numéricos o nombres, y se pide por teclado un valor, número o palabra, y a continuación visualizar si se encuentra en el array. Ahora ha de ejecutarse 3 veces
+</p>
+
+<script type="text/javascript">
+	
+	var tab = [23, 61, 69, "pepe", "tg592x", "sdkl"];
+
+
+	for (j = 0; j < 3; j++) {
+		numero = prompt("Ingrese el número o palabra");
+		Result = Recorrer(tab, numero);
+		Visualizar(Result);
+	}
+
+		function Recorrer(tab, num) {
+			var sw = 'no';
+			for (i = 0; i < tab.length; i++) {
+				if (tab[i] == num){
+					sw = 'si';
+				}
+			}
+			return sw;
+		}
+
+		function Visualizar(dato){
+			if (dato =='si'){
+				alert("Ha sido encontrada");
+			} else {
+				alert("No ha sido encontrado");
+			}
+		}
+
+
+
+</script>
+</body>
+</html>
