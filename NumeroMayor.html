@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-color:lightcyan;
+			font-family: Arial;			
+		}
+	</style>
+</head>
+<body>
+
+<p>
+Declarar un array con valores numéricos y ver el mayor
+</p>
+
+<script type="text/javascript">
+	
+	var tab = [23, 61, 69, 54, 29, 0, -4, 73, 5];
+
+	function Mayor(tab) {
+		var mayor = -Infinity; 
+
+		for (var i = 0; i < tab.length; i++) { 
+			if (tab[i] > mayor) { 
+				mayor = tab[i]; 
+			}
+		}
+
+		return mayor; 
+	}
+
+	var valorMayor = Mayor(tab);
+	alert("El número mayor es: " + valorMayor);
+
+</script>
+</body>
+</html>
