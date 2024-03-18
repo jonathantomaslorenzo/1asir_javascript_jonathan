@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compra de Entradas</title>
+
+</head>
+<body><p> Un programa sobre compra de entradas de un teatro
+Aparece en pantalla las butacas, filas y columna. 3 filas y 2 columnas
+Cuando el usuario pincha en un recuadro o celda, esa celda cambia de color y aparece el mensaje butaca comprada si es que estaba vacia. Si pincha en una que está ocupada. Deberá salir el mensaje butaca ya ocupada. 
+Pinchando va comprando butacas hasta que se llene todo.
+
+Se declara un array bidimensional de tantos elementos como butacas. Todos los elementos con 0
+Y cuando pinche en una butaca o celda el valor se pone en 1
+</p>
+    <h1>Selecciona tus butacas:</h1>
+    <table>
+        <tr>
+            <td id="A1">A1</td>
+            <td id="A2">A2</td>
+        </tr>
+        <tr>
+            <td id="B1">B1</td>
+            <td id="B2">B2</td>
+        </tr>
+        <tr>
+            <td id="C1">C1</td>
+            <td id="C2">C2</td>
+        </tr>
+    </table>
+
+    <script>
+        var butacas = [
+            [0, 0],
+            [0, 0],
+            [0, 0]
+        ];
+
+        function comprarButaca(fila, columna) {
+            if (butacas[fila][columna] === 0) {
+                butacas[fila][columna] = 1;
+                document.getElementById(String.fromCharCode(65 + fila) + (columna + 1)).style.backgroundColor = "cyan";
+                alert("Butaca comprada con exito en la fila " + String.fromCharCode(65 + fila) + " columna " + (columna + 1));
+            } else {
+                alert("Butaca comprada, seleccione otra diferente");
+            }
+        }
+        var celdas = document.querySelectorAll("td");
+        celdas.forEach(function(celda) {
+            celda.addEventListener("click", function() {
+                var fila = celda.parentNode.rowIndex;
+                var columna = celda.cellIndex;
+                comprarButaca(fila, columna);
+            });
+        });
+    </script>
+</body>
+</html>
