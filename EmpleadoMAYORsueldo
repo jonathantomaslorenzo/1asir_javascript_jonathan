@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<p>
+Declarar 2 array, uno con nombres de empleados y otro array con los sueldos correspondientes
+Se pide por pantalla el nombre y sueldo de aquel empleado que gane más
+</p>
+
+<script type="text/javascript">
+	
+//---------------- PROGRAMA PRINCIPAL ---------------------
+
+ function RecorrerArray(nombres, sueldos){
+
+ 		var sueldoMayor = - Infinity ;
+ 		var mayorposicion = - Infinity ;
+		for (var i = 0; i < sueldos.length; i++) { 
+			if (sueldos[i] > sueldoMayor) { 
+
+				sueldoMayor = sueldos[i]; 
+				mayorposicion = i;
+			}
+		}
+		return mayorposicion; 
+	}
+
+
+function visualizarMayorSueldo(nombres, sueldos, p) {
+  alert("El empleado con mayor sueldo es " + nombres[p] + " y tiene un sueldo de " + sueldos[p] + " euros");
+}
+
+//----------------------       ----------------------
+
+	var nombres = ["Juan", "Lolo", "Pepe", "Athenea"];
+	var sueldos = [1365, 2800, 1990, 2005];
+ 	var posicionEmpleadosm = RecorrerArray(nombres, sueldos);
+
+
+	visualizarMayorSueldo(nombres, sueldos, posicionEmpleadosm);
+
+
+</script>
+</body>
+</html>
