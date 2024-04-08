@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un título</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+<p>Declarar un objeto json que contenga el nombre un alumno y sus 2 notas. Como nota1 y nota2
+Se pide la media del alumno. Visualizarla junto con su nombre</p>
+
+<script>
+let alumna = '{"nombre":"Laura","nota1":6, "nota2":5}';
+const obj = JSON.parse(alumna);
+
+
+	function Media(nota1, nota2){
+		var media = (nota1 + nota2) / 2;
+		return media;
+		
+	};
+
+alert("La media de "+ obj.nombre + " es de: " + Media(obj.nota1, obj.nota2));
+
+
+</script>
+</body>
+</html>
